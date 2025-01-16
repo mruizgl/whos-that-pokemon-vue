@@ -178,4 +178,10 @@ Ahora, vamos a modificar y borrar todo lo que no necesitamos que nos ha creado d
     Cambia el nombre de main.css de la carpeta assets a styles.css y modifica la ruta en el archivo main.ts para que funcione correctamente nuestra hoja de estilo.
     Ejecuta el comando npm run dev y muestra el resultado.
 
+![alt text](../../img/003.png)
+![alt text](../../img/004.png)
 
+
+_Configura el proyecto para hacer uso de Tailwind CSS. Consulta la documentación oficial y aplica los cambios donde sea necesario tal y como se indica._
+
+![alt text](../../img/005.png)

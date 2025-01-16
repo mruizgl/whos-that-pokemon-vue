@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <div class="app">
-    <h1>Hola Mundo!</h1>
-  </div>
+  <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
 </template>
 
 <style scoped>
