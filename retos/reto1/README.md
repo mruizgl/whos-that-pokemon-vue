@@ -1,5 +1,14 @@
 ## Reto 1
 
+<div align="center">
+    <img src="../../img/001.gif" width=100>
+    <img src="../../img/002.gif" width=100>
+    <img src="../../img/003.gif" width=100>
+    
+</div>
+
+---------
+
 En este primer reto debemos realizar los primeros pasos de cualquier inicio de proyecto:
 
 1. Crea y configura tu repositorio de Github para la aplicación.
