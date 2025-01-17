@@ -6,6 +6,10 @@
   
       <p v-show="isVisible">¡Hola! Soy un elemento visible.</p>
     </div>
+
+    <section class="flex flex-col justify-center items-center w-screen h-screen">
+      <h1>¿Quién es este Pokémon?</h1>
+    </section>
   </template>
   
   <script>

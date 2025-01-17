@@ -56,5 +56,5 @@ La section justifica al centroal centro, el h1 es un texto grande y el h3 es una
 
 _Utilizando una directiva de VueJS, ¿cómo ocultaríamos esta sección por completo?_
 
-![alt text](../../img/010.png)
 ![alt text](../../img/011.png)
+![alt text](../../img/010.png)
