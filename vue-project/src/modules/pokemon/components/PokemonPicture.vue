@@ -12,18 +12,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
 
-export default defineComponent({
-    setup () {
-        
-
-        return {}
-    }
-})
 </script>
 
 <style scoped>
+img {
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
 
 button {
     @apply bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow;
