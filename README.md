@@ -6,3 +6,4 @@ Tarea para DAD 2º DAM. Juego de adivinar cual es el pokemon para la asignatura 
 2. [Reto 2](./retos/reto2)
 3. [Reto 3](./retos/reto3)
 4. [Reto 4](./retos/reto4)
+5. [Reto 5](./retos/reto5)

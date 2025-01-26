@@ -9,18 +9,24 @@ export const usePokemonGame = () => {
 
     const getPokemons = async (): Promise<Pokemon[]> => {
         const response = await pokemonApi.get<PokemonListResponse>('/?limit=151');
-
-        const pokemonsArray = response.data.results.map( pokemon => {
+    
+        const pokemonsArray = response.data.results.map(pokemon => {
             const urlParts = pokemon.url.split('/');
             const id = urlParts[urlParts.length - 2] ?? 0;
             return {
                 name: pokemon.name,
                 id: +id,
-            }
+            };
         });
-
+    
+        
+        pokemonsArray.sort(() => Math.random() - 0.5);
+    
+        
+        console.log(pokemonsArray);
+    
         return pokemonsArray;
-    }
+    };
 
     onMounted(async() => {
         const pokemons = await getPokemons();
