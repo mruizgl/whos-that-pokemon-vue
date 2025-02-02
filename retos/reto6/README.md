@@ -94,7 +94,7 @@ Verifica en la consola que el Pokémon que aparece en pantalla está dentro de l
 
 ---
 
-![alt text](../../img/601.png)
+![alt text](../../img/6003.png)
 
 ## Mostrando la Imagen del Pokémon
 
@@ -135,7 +135,7 @@ Finalmente, en el `template`, vinculamos la imagen al `src`:
 </template>
 ```
 
-Comprueba que la imagen del Pokémon cargue correctamente.
+![alt text](../../img/604.png)
 
 ---
 
@@ -143,23 +143,77 @@ Comprueba que la imagen del Pokémon cargue correctamente.
 
 Ahora crearemos otra propiedad computada que muestre la imagen original si el usuario ha seleccionado la opción correcta.
 
-En `PokemonPicture.vue`, añadimos:
 
-```ts
-const showOriginalImage = computed(() => {
-  return isCorrect.value; // Esta variable se define en el juego para indicar si la elección fue correcta
-});
-```
 
-Y en el `template`:
-
-```vue
-<img v-if="showOriginalImage" :src="pokemonImage" class="brightness-100 h-[200px]" />
-```
 
 Con esto, la imagen se actualizará dependiendo de si el jugador ha seleccionado correctamente el Pokémon.
 
 ---
 
-Este es el progreso hasta ahora. Si necesitas más detalles o ajustes, dime y lo modifico. 🚀
+![alt text](../../img/605.png)  
+
+-----  
+
+## Confeti cuando aciertas   
+
+## Implementación de Confetti en el Juego Pokémon
+
+### Objetivo
+
+Cuando el jugador adivina correctamente el Pokémon, queremos mostrar una animación de confetti para celebrar la victoria.
+
+### Instalación de la librería `canvas-confetti`
+
+Primero, instalamos la librería `canvas-confetti`, que nos permite generar animaciones de confetti en el navegador.
+
+```bash
+npm install canvas-confetti
+```
+
+Luego, agregamos los tipos necesarios para TypeScript:
+
+```
+npm i --save-dev @types/canvas-confetti
+```
+
+Implementación en el Componente de Juego   
+
+En el componente principal del juego, cuando el jugador selecciona la respuesta correcta, cambiamos el estado del juego a Won y lanzamos la animación de confetti.
+
+```
+import confetti from 'canvas-confetti';
+````
+
+```vue
+
+const onSelectedOption = (selectedId: number) => {
+  console.log({ selectedId });
+
+  if (selectedId === randomPokemon.value.id) {
+    gameStatus.value = GameStatus.Won;
+    showPokemon.value = true;
+    confetti({
+        particleCount: 300,  // Número de partículas
+        spread: 150,         // Ángulo de dispersión
+        origin: {            // Ubicación desde donde se lanzan las partículas
+          y: 0.6
+        }
+      });
+  } else {
+    gameStatus.value = GameStatus.Lost;
+  }
+};
+```
+
+![alt text](../../img/606.png) 
+
+## Bloquear botones si el jugador pierde: 
+Ahora vamos a tratar de que el jugador se le bloqueen las respuestas si ha perdido.  
+
+
+
+
+
+
+
 

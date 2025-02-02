@@ -1,8 +1,8 @@
 <template>
-  <div>
+  
     <PokemonGame />
-    <PokemonPicture />
-  </div>
+    
+  
 </template>
 
 <script setup lang="ts">
